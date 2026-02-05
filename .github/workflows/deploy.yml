@@ -16,4 +16,6 @@ jobs:
             run: pip3 install -r requirements.txt
 
          -  name: Run Application
-            run: nohup python3 app.py > app.log 2>&1 &
+            run: |
+                pkill -f app.py || true
+                setsid nohup python3 app.py > app.log 2>&1 < /dev/null &
