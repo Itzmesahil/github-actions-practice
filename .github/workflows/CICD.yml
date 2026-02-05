@@ -26,3 +26,6 @@ jobs:
             
          -  name: Push Image to Registry
             run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-action:latest
+
+         -  name: Deploy to Prod with Compose
+            run: docker-compose down && docker-compose up -d
