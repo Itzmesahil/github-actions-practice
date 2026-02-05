@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Deploy Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            background: #111827;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            width: 420px;
+            text-align: center;
+        }
+        h1 {
+            color: #38bdf8;
+        }
+        .tag {
+            margin-top: 15px;
+            padding: 10px;
+            background: #1f2937;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .info {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🚀 Auto Deployment Successful</h1>
+
+        <div class="tag">
+            GitHub Actions → Docker Hub → Docker Compose
+        </div>
+
+        <div class="info">
+            <p><b>Host:</b> {{ host }}</p>
+            <p><b>Time:</b> {{ time }}</p>
+        </div>
+    </div>
+</body>
+</html>
