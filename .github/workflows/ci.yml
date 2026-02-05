@@ -1,21 +1,21 @@
-name: Python Ci
+# name: Python Ci
 
-on:
-    push:
-        branches: [main]
+# on:
+#     push:
+#         branches: [main]
 
-jobs:
-    my-python-app:
-        runs-on: ubuntu-latest
+# jobs:
+#     my-python-app:
+#         runs-on: ubuntu-latest
 
-        steps:
-         -  name: Git Checkout
-            uses: actions/checkout@v4
+#         steps:
+#          -  name: Git Checkout
+#             uses: actions/checkout@v4
 
-         -  name: Setup Python
-            uses: actions/setup-python@v5
-            with:
-                python-version: '3.10'
+#          -  name: Setup Python
+#             uses: actions/setup-python@v5
+#             with:
+#                 python-version: '3.10'
 
-         -  name: Run App
-            run: python app.py
+#          -  name: Run App
+#             run: python app.py
